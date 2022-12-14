@@ -333,9 +333,9 @@ plugins:
     auto_render_min_js: <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js" integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
 
 style:
-  darkmode: auto # auto / always / false
+  darkmode: false # auto / always / false
   smooth_scroll: true # true / false
-  font-size: 16px
+  font-size: 18px
   font-family:
     logo: 'system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
     body: 'system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
