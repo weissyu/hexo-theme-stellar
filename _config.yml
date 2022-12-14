@@ -109,10 +109,10 @@ comments:
   # giscus
   # https://giscus.app/zh-TW
   giscus:
-    data-repo: xxx/xxx # [在此输入仓库]
-    data-repo-id: # [在此输入仓库 ID]
-    data-category: # [在此输入分类名]
-    data-category-id:
+    data-repo: weissyu/weissyu.cc
+    data-repo-id: R_kgDOIc255w # [在此输入仓库 ID]
+    data-category: 'Blog Comment' # [在此输入分类名]
+    data-category-id: DIC_kwDOIc25584CTC8U
     data-mapping: pathname
     data-strict: 0
     data-reactions-enabled: 1
