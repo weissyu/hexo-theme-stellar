@@ -32,7 +32,7 @@ hexo.extend.generator.register('search_json_generator', function (locals) {
     if (cfg.content != false && post._content) {
       var content = post._content.trim()
       // 过滤掉标签和注释
-      if (content.includes('{%')) {
+      if (!content.includes('{%')) {
         // 需要保留内容的的标签
         content = content.replace(/{%\s*mark\s*(.*?)\s*%}/g, '$1')
         content = content.replace(/{%\s*folding\s*(.*?)\s*%}/g, '$1')
