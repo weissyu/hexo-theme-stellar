@@ -7,7 +7,7 @@ if (cmt.service) {
 }
 var loadComment = false;
 if (theme.comments.service && theme.comments.service.length > 0) {
-  if (page.comments == undefined || page.comments != false || page.layout != '404') {
+  if (page.comments == undefined || page.comments != false) {
     loadComment = true;
   }
 }
