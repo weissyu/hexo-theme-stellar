@@ -31,19 +31,18 @@ h1.article-title
     h1,h2,h3,h4,h5,h6
       text-align: center
     >h2:not([class])
-      align-self: center
-      border-bottom-style: dashed
-      border-bottom-color: $color-accent
+      border-bottom: none
   >:first-child:not(h1)
     margin-top: 0
   h1:not(:first-child)
     margin-top: 2em
-  h2:first-child
-    margin-top: 0
+  h2
+    margin-bottom: 1rem
+  h3,h4,h5,h6
+    margin-bottom: .5rem
   h2,h3,h4,h5,h6
     color: var(--text-p0)
     padding-top: 1rem
-    margin-bottom: .5rem
     line-height: 1.8
     &:hover
       a.headerlink:before
@@ -61,8 +60,12 @@ h1.article-title
     p,ul,ol
       font-size: $fs-14
       line-height: 1.5
+      code 
+        font-size: inherit
+        padding: 0
   p,blockquote,.tag-plugin,ul,ol,.highlight,table
     *
+<<<<<<< HEAD
       --gap-p: .5rem
   h1,h2,h3,h4
     &+p,&+ul,&+ol
@@ -72,11 +75,17 @@ h1.article-title
     margin-top: 2rem
     // margin-top: 'calc(%s - 4px)' % var(--gap-p)
     // margin-bottom: 'calc(%s - 4px)' % var(--gap-p)
+=======
+      --gap-p: var(--gap-p-compact)
+>>>>>>> upsstream/main
   .tag-plugin,iframe
     margin-top: var(--gap-p)
     margin-bottom: var(--gap-p)
   iframe
     display: block
+  ul>li, ol>li
+    margin-top: 4px
+    margin-bottom: 4px
 
 // titles
 .md-text.content

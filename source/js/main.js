@@ -144,7 +144,7 @@ const init = {
    */
   registerTabsTag: function () {
     // Binding `nav-tabs` & `tab-content` by real time permalink changing.
-    document.querySelectorAll('.tabs ul.nav-tabs .tab').forEach(element => {
+    document.querySelectorAll('.tabs .nav-tabs .tab').forEach(element => {
       element.addEventListener('click', event => {
         event.preventDefault();
         // Prevent selected tab to select again.
@@ -309,6 +309,9 @@ if (stellar.search.service) {
     stellar.jQuery(() => {
       stellar.loadScript('/js/search/local-search.js', { defer: true }).then(function () {
         var $inputArea = $("input#search-input");
+        if ($inputArea.length == 0) {
+          return;
+        }
         var $resultArea = document.querySelector("div#search-result");
         $inputArea.focus(function() {
           var path = stellar.search[stellar.search.service]?.path || '/search.json';
