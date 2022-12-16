@@ -336,15 +336,11 @@ plugins:
 style:
   darkmode: false # auto / always / false
   smooth_scroll: true # true / false
-<<<<<<< HEAD
-  font-size: 18px
-=======
   font-size:
     root: 16px
     body: .9375rem # 15px
     code: 85% # 14px
     codeblock: 0.8125rem # 13px
->>>>>>> upsstream/main
   font-family:
     logo: 'system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'
     body: 'system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif'

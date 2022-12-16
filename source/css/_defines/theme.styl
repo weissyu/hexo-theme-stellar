@@ -14,10 +14,6 @@ $color-text-h = hue($color-text)
 $color-text-s = saturation($color-text)
 $color-text-l = lightness($color-text)
 
-$color-meta-h = hue($color-meta)
-$color-meta-s = saturation($color-meta)
-$color-meta-l = lightness($color-meta)
-
 set_text_dark()
   --text-p0: hsl($color-text-h, $color-text-s, 0)
   --text-p1: hsl($color-text-h, $color-text-s, $color-text-l)
@@ -48,20 +44,11 @@ set_text_light()
 
 set_darkmode()
   :root
-<<<<<<< HEAD
-    --site-bg: hsl($color-background-h, $color-background-s / 2, 16)
-    --card: hsl($color-block-h, $color-block-s * 1.5, 25)
-    --block: hsl($color-block-h, $color-block-s, 12)
-    --block-border: hsl($color-block-h, $color-block-s, 24)
-    --block-hover: hsl($color-block-h, $color-block-s, 9)
-    --block-lighten: hsl($color-block-h, $color-block-s, 30)
-=======
     --site-bg: hsl($color-background-h, $color-background-s * 0.5, (100 - $color-background-l) * 2 + 8)
     --card: hsl($color-block-h, $color-block-s * 1.2, 24)
     --block: hsl($color-block-h, $color-block-s, 16)
     --block-border: hsl($color-block-h, $color-block-s, 24)
     --block-hover: hsl($color-block-h, $color-block-s, 20)
->>>>>>> upsstream/main
     set_text_light()
     @media screen and (max-width: $device-mobile-max)
       --site-bg: black
@@ -73,4 +60,4 @@ if hexo-config('style.darkmode') == 'auto'
 
 
 if hexo-config('style.darkmode') == 'always'
-  set_darkmode()
+  ()
