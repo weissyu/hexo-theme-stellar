@@ -64,9 +64,14 @@ h1.article-title
   p,blockquote,.tag-plugin,ul,ol,.highlight,table
     *
       --gap-p: .5rem
+  h1,h2,h3,h4
+    &+p,&+ul,&+ol
+      margin-top: 0.75em
+
   p,ul,ol
-    margin-top: 'calc(%s - 4px)' % var(--gap-p)
-    margin-bottom: 'calc(%s - 4px)' % var(--gap-p)
+    margin-top: 2em
+    // margin-top: 'calc(%s - 4px)' % var(--gap-p)
+    // margin-bottom: 'calc(%s - 4px)' % var(--gap-p)
   .tag-plugin,iframe
     margin-top: var(--gap-p)
     margin-bottom: var(--gap-p)
