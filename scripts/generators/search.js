@@ -1,6 +1,7 @@
 /**
  * https://github.com/wzpan/hexo-generator-search
  */
+const { stripHTML } = require('hexo-util')
 
 hexo.extend.generator.register('search_json_generator', function (locals) {
   if (this.theme.config.search.service != 'local_search') { return {} }
@@ -29,6 +30,7 @@ hexo.extend.generator.register('search_json_generator', function (locals) {
     if (post.path) {
       temp_post.path = root + post.path
     }
+<<<<<<< HEAD
     if (cfg.content != false && post._content) {
       var content = post._content.trim()
       // 过滤掉标签和注释
@@ -66,6 +68,19 @@ hexo.extend.generator.register('search_json_generator', function (locals) {
         content = content.replace(/```([^`]+)```/g, '')// 过滤代码块
       }      
       
+=======
+    if (cfg.content != false && post.content) {
+      var content = stripHTML(post.content).trim()
+      // 部分HTML标签
+      content = content.replace(/<iframe[\s|\S]+iframe>/g, '')
+      content = content.replace(/<hr>/g, '')
+      content = content.replace(/<br>/g, '')
+      // 换行符换成空格
+      content = content.replace(/\\n/g, ' ')
+      content = content.replace(/\n/g, ' ')
+      // 多个连续空格换成单个空格
+      content = content.replace(/[\s]{2,}/g, ' ')
+>>>>>>> upstream/main
       temp_post.content = content.trim()
     }
     if (post.tags && post.tags.length > 0) {
