@@ -346,6 +346,7 @@ if (stellar.search.service) {
           }
         });
         var observer = new MutationObserver(function(mutationsList, observer) {
+          if ($inputArea.val().length == 0) return;
           if (mutationsList.length == 1) {
             if (mutationsList[0].addedNodes.length) {
               $('.search-wrapper').removeClass('noresult');

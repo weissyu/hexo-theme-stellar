@@ -50,7 +50,7 @@ var searchFunc = function(path, filter, searchId, contentId) {
           .sort(function(a,b) { return b.split(" ").length - a.split(" ").length; });
         $resultContent.innerHTML = "";
         if (this.value.trim().length <= 0) {
-          document.querySelector('.search-wrapper').classList.remove('noresult');             
+          document.querySelector('.search-wrapper').classList.remove('noresult') 
           return;
         }
         // perform local searching
