@@ -50,10 +50,11 @@ var searchFunc = function(path, filter, searchId, contentId) {
           .sort(function(a,b) { return b.split(" ").length - a.split(" ").length; });
         $resultContent.innerHTML = "";
         if (this.value.trim().length <= 0) {
+          document.querySelector('.search-wrapper').classList.remove('noresult');             
           return;
         }
         // perform local searching
-        datas.forEach(function(data) {
+        datas.forEach(function(data) {          
           if (!data.content?.trim().length) { return }
           var matches = 0;
           if (filter && !data.path.includes(filter)) { return }
